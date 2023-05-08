@@ -87,6 +87,10 @@ assertFalse(isResponse({}));
 assertFalse(isResponse(null));
 ```
 
+## API
+
+All APIs can be found in the [deno doc](https://deno.land/x/response_utils?doc).
+
 ## License
 
 Copyright © 2023-present [httpland](https://github.com/httpland).
