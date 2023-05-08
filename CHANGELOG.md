@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](https://github.com/httpland/response-utils/compare/1.0.0-beta.1...1.0.0-beta.2) (2023-05-08)
+
+
+### Features
+
+* **create:** change interface types ([dc85791](https://github.com/httpland/response-utils/commit/dc857913b22447b07d7e1201547dd7e8ae1b54a4))
+
 # 1.0.0-beta.1 (2023-05-08)
 
 
