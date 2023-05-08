@@ -87,6 +87,25 @@ assertFalse(isResponse({}));
 assertFalse(isResponse(null));
 ```
 
+## withHeader
+
+Return an instance with the provided `Response` replacing the specified header.
+There are no side effects on the original `Response`.
+
+```ts
+import { withHeader } from "https://deno.land/x/response_utils@$VERSION/with_header.ts";
+import { assert } from "https://deno.land/std/testing/asserts.ts";
+
+declare const init: Response;
+declare const fieldName: string;
+declare const fieldValue: string;
+
+const response = withHeader(init, fieldName, fieldValue);
+
+assert(response.headers.get(fieldName), fieldValue);
+assert(init !== response);
+```
+
 ## API
 
 All APIs can be found in the [deno doc](https://deno.land/x/response_utils?doc).
