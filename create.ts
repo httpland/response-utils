@@ -1,8 +1,6 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import { isResponse } from "./is.ts";
-
 /** Create a new `Response`.
  *
  * If you create a new `Response` from an existing `Response`, any options you set
@@ -21,17 +19,15 @@ import { isResponse } from "./is.ts";
  * ```
  */
 export function createResponse(
-  input: Response | Body,
+  input: Response,
   init?: ResponseInit,
 ): Response {
-  init = isResponse(input)
-    ? {
-      headers: input.headers,
-      status: input.status,
-      statusText: input.statusText,
-      ...init,
-    }
-    : init;
+  init = {
+    headers: input.headers,
+    status: input.status,
+    statusText: input.statusText,
+    ...init,
+  };
 
   return new Response(input.body, init);
 }
